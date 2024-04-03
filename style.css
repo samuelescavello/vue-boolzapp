@@ -27,7 +27,42 @@
     background-color: rgb(142, 218, 252);
 }
 
+.navbar{
+    height: 50px;
+}
+
+.userschat{
+    height: calc(100% - 220px);
+    overflow-y: auto;
+}
+
 .ssmain{
     height: calc(100% - 160px);
     background-image: url(/img/mine.jpg);
+    overflow-y: auto;
+}
+
+.ssmex{
+    width: 600px;
+    height: 50px;
+}
+
+i{
+    color: gray;
+}
+
+a{
+    color: gray;
+    display: block;
+}
+
+.notification{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.fa-bell-slash{
+    color:  rgb(142, 218, 252);
 }
