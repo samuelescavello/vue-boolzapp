@@ -11,6 +11,7 @@
 
 .left{
     width: 40%;
+    border-right: 1px solid lightgrey;
 }
 
 .right{
@@ -34,6 +35,11 @@
 .userschat{
     height: calc(100% - 220px);
     overflow-y: auto;
+}
+
+.chat{
+    height: 80px;
+    background-color: white;
 }
 
 .ssmain{
@@ -65,4 +71,9 @@ a{
 
 .fa-bell-slash{
     color:  rgb(142, 218, 252);
+}
+
+img{
+    width: 50px;
+    border-radius: 50%;
 }
