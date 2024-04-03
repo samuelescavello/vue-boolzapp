@@ -35,11 +35,13 @@
 .userschat{
     height: calc(100% - 220px);
     overflow-y: auto;
+    background-color: white;
 }
 
 .chat{
     height: 80px;
     background-color: white;
+    border-bottom: 1px solid lightgray;
 }
 
 .ssmain{
@@ -76,4 +78,8 @@ a{
 img{
     width: 50px;
     border-radius: 50%;
+}
+
+.messagetext{
+    background-color: rgb(243, 238, 234);
 }
