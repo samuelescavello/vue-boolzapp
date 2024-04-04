@@ -55,9 +55,9 @@
                         <img :src="el.avatar" :alt="el.name">
                         <div class="p-3 ">
                             <h5>{{el.name}}</h5>
-                            <span>ultimo messaggio inviato</span>
+                            <span class="gray">ultimo messaggio inviato</span>
                         </div>
-                        <span class="ms-auto">15:00</span>
+                        <span class="ms-auto gray">15:00</span>
                     </div>
                 </div>
             </div>
@@ -69,7 +69,7 @@
                         </div>
                         <div class="p-2 ">
                             <h5>{{activeUser.name}}</h5>
-                            <span>ultimo accesso oggi alle 12:00</span>
+                            <span class="gray">ultimo accesso oggi alle 12:00</span>
                         </div>
                     </div>
                     <div class="p-3 ">
@@ -82,7 +82,7 @@
                     <div v-for="(msg,index) in activeUser.messages" >
                         <div class="mex" :class="msg.status">
                             {{msg.message}}
-                            <div class="text-end my-1">
+                            <div class="text-end my-1 small gray">
                                 {{msg.date}}
                             </div>
                         </div>

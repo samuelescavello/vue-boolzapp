@@ -106,13 +106,13 @@ export const contacts = [
     },
     {
         id: 6,
-        name: 'Claudia',
+        name: 'alessia',
         avatar: './img/avatar_6.jpg',
         visible: true,
         messages: [
             {
                 date: '10/01/2020 15:30:55',
-                message: 'Ciao Claudia, hai novità?',
+                message: 'Ciao ale, hai novità?',
                 status: 'sent'
             },
             {
@@ -122,7 +122,7 @@ export const contacts = [
             },
             {
                 date: '10/01/2020 15:51:00',
-                message: 'Nessuna nuova, buona nuova',
+                message: 'va bene',
                 status: 'sent'
             }
         ],

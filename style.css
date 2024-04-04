@@ -85,7 +85,7 @@ img{
 }
 
 .activebg{
-    background-color: rgba(128, 128, 128, 0.295);
+    background-color: rgba(128, 128, 128, 0.205);
 }
 
 .mex{
@@ -103,4 +103,8 @@ img{
 .sent{
     background-color: #D5F9BA;
     margin-left: auto;
+}
+
+.gray{
+    color: gray;
 }
