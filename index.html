@@ -35,7 +35,7 @@
                     <div class="notification text-center align-content-center mx-3 ">
                         <i class="fa-solid fa-bell-slash fa-xl"></i>
                     </div>
-                    
+
                     <div>
                         <span>Ricevi notifiche di nuovi messaggi</span>
                         <a href="#">attiva notifiche desktop</a>
@@ -44,14 +44,14 @@
                 <nav class="navbar bg-body-tertiary">
                     <form class="container-fluid">
                         <div class="input-group">
-                            <span class="input-group-text"><i
-                                    class="fa-solid fa-magnifying-glass"></i></span>
+                            <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
                             <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat">
                         </div>
                     </form>
                 </nav>
                 <div class="userschat">
-                    <div class="chat p-3 d-flex  align-items-center" v-for="(el,index) in contacts" :class="{'activebg': this.activeContact === el.id}" @click="userActive(el.id)">
+                    <div class="chat p-3 d-flex  align-items-center" v-for="(el,index) in contacts"
+                        :class="{'activebg': this.activeContact === el.id}" @click="userActive(el.id)">
                         <img :src="el.avatar" :alt="el.name">
                         <div class="p-3 ">
                             <h5>{{el.name}}</h5>
@@ -63,8 +63,14 @@
             </div>
             <div class="right">
                 <div class="ssnav d-flex justify-content-between align-content-center align-items-center ">
-                    <div>
-
+                    <div class="d-flex">
+                        <div class="p-2 ">
+                            <img :src="activeUser.avatar" :alt="activeUser.name">
+                        </div>
+                        <div class="p-2 ">
+                            <h5>{{activeUser.name}}</h5>
+                            <span>ultimo accesso oggi alle 12:00</span>
+                        </div>
                     </div>
                     <div class="p-3 ">
                         <i class="fa-solid fa-magnifying-glass p-2 fa-xl"></i>
@@ -72,7 +78,13 @@
                         <i class="fa-solid fa-ellipsis-vertical p-2 fa-xl"></i>
                     </div>
                 </div>
-                <div class="ssmain"></div>
+                <div class="ssmain">
+                    <div v-for="(msg,index) in activeUser.messages" >
+                        <div class="mex" :class="msg.status">
+                            {{msg.message}}
+                        </div>
+                    </div>
+                </div>
                 <div class=" ssnav d-flex justify-content-between align-items-center">
                     <div class="mx-3">
                         <i class="fa-regular fa-face-smile fa-xl"></i>

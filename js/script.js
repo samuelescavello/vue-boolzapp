@@ -13,7 +13,12 @@ createApp({
             this.activeContact = id
         },
     },
-    
+    computed:{
+        activeUser(){
+           return this.contacts.find((el)=>el.id === this.activeContact)
+          
+        },
+    },
     mounted(){
         console.log(this.contacts)
     },

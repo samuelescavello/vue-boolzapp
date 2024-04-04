@@ -87,3 +87,20 @@ img{
 .activebg{
     background-color: rgba(128, 128, 128, 0.295);
 }
+
+.mex{
+    width: 300px;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 5px;
+}
+
+.received{
+    background-color: white;
+
+}
+
+.sent{
+    background-color: #D5F9BA;
+    margin-left: auto;
+}
