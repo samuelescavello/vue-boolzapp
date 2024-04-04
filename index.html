@@ -45,12 +45,12 @@
                     <form class="container-fluid">
                         <div class="input-group">
                             <span class="input-group-text"><i class="fa-solid fa-magnifying-glass"></i></span>
-                            <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat">
+                            <input type="text" class="form-control" placeholder="cerca o inizia una nuova chat" v-model="searceText">
                         </div>
                     </form>
                 </nav>
                 <div class="userschat">
-                    <div class="chat p-3 d-flex  align-items-center" v-for="(el,index) in contacts"
+                    <div class="chat p-3 d-flex  align-items-center" v-for="(el,index) in filteredContact"
                         :class="{'activebg': this.activeContact === el.id}" @click="userActive(el.id)">
                         <img :src="el.avatar" :alt="el.name">
                         <div class="p-3 ">
@@ -82,6 +82,9 @@
                     <div v-for="(msg,index) in activeUser.messages" >
                         <div class="mex" :class="msg.status">
                             {{msg.message}}
+                            <div class="text-end my-1">
+                                {{msg.date}}
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,7 +93,8 @@
                         <i class="fa-regular fa-face-smile fa-xl"></i>
                     </div>
                     <div>
-                        <input class="form-control ssmex" placeholder="scrivi un messaggio">
+                        <input type="text" class="form-control ssmex" placeholder="scrivi un messaggio"
+                         v-model="messageText" @keyup.enter="sendMessage ()">
                     </div>
                     <div class="mx-3">
                         <i class="fa-solid fa-microphone fa-xl"></i>
