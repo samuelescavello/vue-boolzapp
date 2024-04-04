@@ -83,3 +83,7 @@ img{
 .messagetext{
     background-color: rgb(243, 238, 234);
 }
+
+.activebg{
+    background-color: rgba(128, 128, 128, 0.295);
+}

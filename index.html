@@ -51,7 +51,7 @@
                     </form>
                 </nav>
                 <div class="userschat">
-                    <div class="chat p-3 d-flex  align-items-center" v-for="(el,index) in contacts">
+                    <div class="chat p-3 d-flex  align-items-center" v-for="(el,index) in contacts" :class="{'activebg': this.activeContact === el.id}" @click="userActive(el.id)">
                         <img :src="el.avatar" :alt="el.name">
                         <div class="p-3 ">
                             <h5>{{el.name}}</h5>
